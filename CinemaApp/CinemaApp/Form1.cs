@@ -96,5 +96,110 @@ namespace CinemaApp
                 count++;
             }
         }
+
+        private void Movie2_Click(object sender, EventArgs e)
+        {
+            Form1 frm1 = new Form1();
+
+            if (Movie2ComboBox2.SelectedItem != null && Movie2ComboBox.SelectedItem != null)
+            {
+                switch (Movie2ComboBox.SelectedItem.ToString())
+                {
+                    case "Nar Mobile":
+                        YerCount = 8;
+                        break;
+                    case "Vip Salon":
+                        YerCount = 16;
+                        break;
+                    case "Ergen Salon":
+                        YerCount = 10;
+                        break;
+                    case "Sevgililer Salon":
+                        YerCount = 12;
+                        break;
+                    default:
+                        break;
+                }
+                var Film = new Movie("Game Of Thrones", "5Azn", Movie2ComboBox.SelectedItem.ToString(), Movie2ComboBox2.SelectedItem.ToString());
+                this.Hide();
+                Form2 frm2 = new Form2();
+                frm2.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Zal ve ya Seans secmediniz!");
+            }
+        }
+
+        private void Movie3_Click(object sender, EventArgs e)
+        {
+            Form1 frm1 = new Form1();
+
+            if (Movie3ComboBox3.SelectedItem != null && Movie3ComboBox.SelectedItem != null)
+            {
+                switch (Movie3ComboBox.SelectedItem.ToString())
+                {
+                    case "Nar Mobile":
+                        YerCount = 8;
+                        break;
+                    case "Vip Salon":
+                        YerCount = 16;
+                        break;
+                    case "Ergen Salon":
+                        YerCount = 10;
+                        break;
+                    case "Sevgililer Salon":
+                        YerCount = 12;
+                        break;
+                    default:
+                        break;
+                }
+                var Film = new Movie("Gladiator", "5Azn", Movie3ComboBox.SelectedItem.ToString(), Movie3ComboBox3.SelectedItem.ToString());
+                this.Hide();
+                Form2 frm2 = new Form2();
+                frm2.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Zal ve ya Seans secmediniz!");
+            }
+        }
+
+        private void Movie4_Click(object sender, EventArgs e)
+        {
+            Form1 frm1 = new Form1();
+
+            if (Movie4ComboBox4.SelectedItem != null && Movie4ComboBox.SelectedItem != null)
+            {
+                switch (Movie4ComboBox.SelectedItem.ToString())
+                {
+                    case "Nar Mobile":
+                        YerCount = 8;
+                        break;
+                    case "Vip Salon":
+                        YerCount = 16;
+                        break;
+                    case "Ergen Salon":
+                        YerCount = 10;
+                        break;
+                    case "Sevgililer Salon":
+                        YerCount = 12;
+                        break;
+                    default:
+                        break;
+                }
+                var Film = new Movie("Spiderman", "5Azn", Movie4ComboBox.SelectedItem.ToString(), Movie4ComboBox4.SelectedItem.ToString());
+                this.Hide();
+                Form2 frm2 = new Form2();
+                frm2.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Zal ve ya Seans secmediniz!");
+            }
+        }
     }
 }

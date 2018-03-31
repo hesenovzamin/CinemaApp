@@ -57,10 +57,13 @@ namespace CinemaApp
         }
         void btn_Click(object sender, EventArgs e)
         {
+            string a = "";
+            string b = "";
             int count = 0;
             Button buttonn = sender as Button;
             buttonn.BackColor = Color.Aqua;
             seatList.Add(buttonn);
+            
             foreach (var item in seatList)
             {
                 if (buttonn.Text == item.Text)
@@ -74,18 +77,40 @@ namespace CinemaApp
             }
             else
             {
+                a = buttonn.Text;
+                seatList.Remove(buttonn);
                 foreach (var item in seatList)
                 {
-                    if (buttonn.Text==item.Text)
+                    if (a==item.Text)
                     {
-                        Secilenler.Text.Split();
+                        item.BackColor = Color.Green;
+                        seatList.Remove(item);
+                        break;
                     }
-                    buttonn.BackColor = Color.Green;
+                }
+                foreach (var item in seatList)
+                {
+                      
+                    b += " " + item.Text;
+                    Secilenler.Text = b;
+
+
+                }
+                if (seatList.Count==0)
+                {
+                    Secilenler.Text = "";
                 }
             }
-        
 
 
+          
+        }
+
+        private void ChooseSeat_Click(object sender, EventArgs e)
+        {
+            Ticket frm3 = new Ticket();
+            this.Hide();
+            frm3.Show();
         }
     }
 }

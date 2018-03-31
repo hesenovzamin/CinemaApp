@@ -20,3 +20,4 @@ C:\Users\User\Desktop\Cinema\CinemaApp\CinemaApp\obj\Debug\CinemaApp.csproj.Core
 C:\Users\User\Desktop\Cinema\CinemaApp\CinemaApp\obj\Debug\CinemaApp.exe
 C:\Users\User\Desktop\Cinema\CinemaApp\CinemaApp\obj\Debug\CinemaApp.pdb
 C:\Users\User\Desktop\CinemaApp\CinemaApp\CinemaApp\obj\Debug\CinemaApp.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\CinemaApp\CinemaApp\CinemaApp\obj\Debug\CinemaApp.Ticket.resources

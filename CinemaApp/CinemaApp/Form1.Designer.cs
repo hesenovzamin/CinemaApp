@@ -93,6 +93,7 @@
             this.Movie2.Size = new System.Drawing.Size(257, 169);
             this.Movie2.TabIndex = 2;
             this.Movie2.TabStop = false;
+            this.Movie2.Click += new System.EventHandler(this.Movie2_Click);
             // 
             // Movie3
             // 
@@ -102,6 +103,7 @@
             this.Movie3.Size = new System.Drawing.Size(257, 169);
             this.Movie3.TabIndex = 3;
             this.Movie3.TabStop = false;
+            this.Movie3.Click += new System.EventHandler(this.Movie3_Click);
             // 
             // Movie4
             // 
@@ -111,6 +113,7 @@
             this.Movie4.Size = new System.Drawing.Size(257, 169);
             this.Movie4.TabIndex = 4;
             this.Movie4.TabStop = false;
+            this.Movie4.Click += new System.EventHandler(this.Movie4_Click);
             // 
             // label2
             // 
