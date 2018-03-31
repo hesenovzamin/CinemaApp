@@ -5,7 +5,6 @@ C:\Users\User\Desktop\CinemaApp\CinemaApp\CinemaApp\obj\Debug\CinemaApp.csprojRe
 C:\Users\User\Desktop\CinemaApp\CinemaApp\CinemaApp\obj\Debug\CinemaApp.Form1.resources
 C:\Users\User\Desktop\CinemaApp\CinemaApp\CinemaApp\obj\Debug\CinemaApp.Properties.Resources.resources
 C:\Users\User\Desktop\CinemaApp\CinemaApp\CinemaApp\obj\Debug\CinemaApp.csproj.GenerateResource.Cache
-C:\Users\User\Desktop\CinemaApp\CinemaApp\CinemaApp\obj\Debug\CinemaApp.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\CinemaApp\CinemaApp\CinemaApp\obj\Debug\CinemaApp.exe
 C:\Users\User\Desktop\CinemaApp\CinemaApp\CinemaApp\obj\Debug\CinemaApp.pdb
 C:\Users\User\Desktop\CinemaApp\CinemaApp\CinemaApp\obj\Debug\CinemaApp.Form2.resources
@@ -20,3 +19,4 @@ C:\Users\User\Desktop\Cinema\CinemaApp\CinemaApp\obj\Debug\CinemaApp.csproj.Gene
 C:\Users\User\Desktop\Cinema\CinemaApp\CinemaApp\obj\Debug\CinemaApp.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\Cinema\CinemaApp\CinemaApp\obj\Debug\CinemaApp.exe
 C:\Users\User\Desktop\Cinema\CinemaApp\CinemaApp\obj\Debug\CinemaApp.pdb
+C:\Users\User\Desktop\CinemaApp\CinemaApp\CinemaApp\obj\Debug\CinemaApp.csproj.CoreCompileInputs.cache

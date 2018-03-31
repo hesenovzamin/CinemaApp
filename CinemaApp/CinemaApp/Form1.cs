@@ -26,8 +26,6 @@ namespace CinemaApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Form2 frm2 = new Form2();
-            frm2.Show();
             foreach (var item in CinemaApp.Seans.Vaxt)
             {
                 Movie1ComboBox1.Items.Add(item.Time);
@@ -48,7 +46,7 @@ namespace CinemaApp
        private void Movie1_Click(object sender, EventArgs e)
         {
             Form1 frm1 = new Form1();
-            Form2 frm2 = new Form2();
+          
             if (Movie1ComboBox1.SelectedItem != null && Movie1ComboBox.SelectedItem != null)
             {
                 switch (Movie1ComboBox.SelectedItem.ToString())
@@ -70,6 +68,7 @@ namespace CinemaApp
                 }
                 var Film = new Movie("Dag2", "5Azn", Movie1ComboBox.SelectedItem.ToString(),Movie1ComboBox1.SelectedItem.ToString());
                 this.Hide();
+                Form2 frm2 = new Form2();
                 frm2.Show();
                
             }
