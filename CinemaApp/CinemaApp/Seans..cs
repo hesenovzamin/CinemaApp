@@ -7,10 +7,16 @@ using System.Threading.Tasks;
 namespace CinemaApp
 {
     public class Seans
-    {   
+    {
+        public static List<Seans> Vaxt = new List<Seans>();
         public int Id;
         public string Time;
-        //  public List<string> Time = new List<string>() { "12:00","15:00","19:00","21:00","23:00"};
+        public Seans(int _Id, string _Time)
+        {
+            Id = _Id;
+            Time = _Time;
+            Vaxt.Add(this);
+        }
 
     }
 }

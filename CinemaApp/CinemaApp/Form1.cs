@@ -12,87 +12,89 @@ namespace CinemaApp
 {
     public partial class Form1 : Form
     {
-     
-        public static List<Seans> sns = new List<Seans>();
-        public static List<Hall> Zal = new List<Hall>();
-        public static List<Movie> Film = new List<Movie>();
+        public static int YerCount;
         public List<string> Time = new List<string>() { "12:00", "15:00", "19:00", "21:00", "23:00" };
         public List<string> Hall = new List<string>() { "Nar Mobile", "Vip Salon", "Ergen Salon", "Sevgililer Salon"};
         public Form1()
         {
-            this.Hide();
-            Form2 frm2 = new Form2();
-            frm2.Show();
             InitializeComponent();
-            Combobox();
+            Halls();
+            Seans();
+           // Combobox();
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Hide();
-            foreach (var item in Time)
+            Form2 frm2 = new Form2();
+            frm2.Show();
+            foreach (var item in CinemaApp.Seans.Vaxt)
             {
-                string A = item;
-                Movie1ComboBox1.Items.Add(A);
-                Movie2ComboBox2.Items.Add(A);
-                Movie3ComboBox3.Items.Add(A);
-                Movie4ComboBox4.Items.Add(A);
+                Movie1ComboBox1.Items.Add(item.Time);
+                Movie2ComboBox2.Items.Add(item.Time);
+                Movie3ComboBox3.Items.Add(item.Time);
+                Movie4ComboBox4.Items.Add(item.Time);
             }
-            foreach (var item in Hall)
-            {
-                string A = item;
-                Movie1ComboBox.Items.Add(A);
-                Movie2ComboBox.Items.Add(A);
-                Movie3ComboBox.Items.Add(A);
-                Movie4ComboBox.Items.Add(A);
+            foreach (var item in CinemaApp.Hall.Zal)
+            {               
+                Movie1ComboBox.Items.Add(item.Name);
+                Movie2ComboBox.Items.Add(item.Name);
+                Movie3ComboBox.Items.Add(item.Name);
+                Movie4ComboBox.Items.Add(item.Name);
             }
         }
       
 
-        private void Movie1_Click(object sender, EventArgs e)
+       private void Movie1_Click(object sender, EventArgs e)
         {
             Form1 frm1 = new Form1();
             Form2 frm2 = new Form2();
             if (Movie1ComboBox1.SelectedItem != null && Movie1ComboBox.SelectedItem != null)
             {
-               
-                var Kino = new Movie();
-                Kino.Name = "Dag2";
-                Kino.Qiymet = "5Azn";
-                Kino.Salon = Movie1ComboBox.SelectedItem.ToString();
-                Kino.vaxt = Movie1ComboBox1.SelectedItem.ToString();
-                Film.Add(Kino);
+                switch (Movie1ComboBox.SelectedItem.ToString())
+                {
+                    case "Nar Mobile":
+                        YerCount = 8;
+                        break;
+                    case "Vip Salon":
+                        YerCount = 16;
+                        break;
+                    case "Ergen Salon":
+                        YerCount = 10;
+                        break;
+                    case "Sevgililer Salon":
+                        YerCount = 12;
+                        break; 
+                    default:
+                        break;
+                }
+                var Film = new Movie("Dag2", "5Azn", Movie1ComboBox.SelectedItem.ToString(),Movie1ComboBox1.SelectedItem.ToString());
                 this.Hide();
                 frm2.Show();
                
             }
-            else
+           else
+          {
+               MessageBox.Show("Zal ve ya Seans secmediniz!");
+           }
+       }
+      
+        void Halls()
+        {
+            foreach (string item in Hall)
             {
-                MessageBox.Show("Zal ve ya Seans secmediniz!");
+                int count = 1;
+                Hall Zal = new Hall(count,item);
+                count++;
             }
         }
-        void Combobox()
+        void Seans()
         {
-            foreach (var item in Time)
+            foreach (string item in Time)
             {
-                var seans = new Seans();
                 int count = 1;
-                seans.Id = count;
-                seans.Time = item;
-                sns.Add(seans);
+                Seans Vaxt = new Seans(count, item);
                 count++;
-
-            }
-            foreach (var item in Time)
-            {
-                var Salon = new Hall();
-                int count = 1;
-                Salon.Id = count;
-                Salon.Name = item;
-                Zal.Add(Salon);
-                count++;
-
             }
         }
     }
